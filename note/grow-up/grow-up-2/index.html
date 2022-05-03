@@ -22,29 +22,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"phishinqi.github.io","root":"/Blog/","images":"/Blog/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/Blog/js/config.js"></script>
 
-    <meta name="description" content="本文将讨论如何快速更新Python库 查看所有可升级的Python库1pip3 list --outdated  升级所有库借助第三方库我们可通过使用pip-review进行更新。 安装语句： 1pip install pip-review  安装完之后，我们可以通过如下语句进行更新： 1pip-review --local --interactive  输入A，全部升级即可 借助Python脚本">
+    <meta name="description" content="这是阅读《向上生长》后的第二篇阅读笔记。究竟为什么要写这些看似没用的东西？也许是在借鉴作者“九边”的做法吧。他选择将收获的新知识写下来发一条微博，我则选择将阅读这本书每一章后所带给我的感觉记录在自己的 Blog 中。         我并非与九边相同的前端工程师，对于前端的相关语言也只是略懂一二而已，不过这并不影响我写这篇阅读笔记的进程。“对之前读过的书有个记录，在吸收新知识的同时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何快速更新所有Python库">
-<meta property="og:url" content="https://phishinqi.github.io/Blog/tutorial/pip-upd/index.html">
+<meta property="og:title" content="向上生长 二">
+<meta property="og:url" content="https://phishinqi.github.io/Blog/note/grow-up/grow-up-2/index.html">
 <meta property="og:site_name" content="PhishinQi&#39;s Blog">
-<meta property="og:description" content="本文将讨论如何快速更新Python库 查看所有可升级的Python库1pip3 list --outdated  升级所有库借助第三方库我们可通过使用pip-review进行更新。 安装语句： 1pip install pip-review  安装完之后，我们可以通过如下语句进行更新： 1pip-review --local --interactive  输入A，全部升级即可 借助Python脚本">
+<meta property="og:description" content="这是阅读《向上生长》后的第二篇阅读笔记。究竟为什么要写这些看似没用的东西？也许是在借鉴作者“九边”的做法吧。他选择将收获的新知识写下来发一条微博，我则选择将阅读这本书每一章后所带给我的感觉记录在自己的 Blog 中。         我并非与九边相同的前端工程师，对于前端的相关语言也只是略懂一二而已，不过这并不影响我写这篇阅读笔记的进程。“对之前读过的书有个记录，在吸收新知识的同时">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-03T01:28:32.000Z">
-<meta property="article:modified_time" content="2022-05-03T01:29:47.256Z">
+<meta property="article:published_time" content="2022-05-03T12:50:59.000Z">
+<meta property="article:modified_time" content="2022-05-03T13:31:33.499Z">
 <meta property="article:author" content="Ryokou_Kiryu">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="教程">
+<meta property="article:tag" content="阅读笔记">
+<meta property="article:tag" content="九边">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://phishinqi.github.io/Blog/tutorial/pip-upd/">
+<link rel="canonical" href="https://phishinqi.github.io/Blog/note/grow-up/grow-up-2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://phishinqi.github.io/Blog/tutorial/pip-upd/","path":"/tutorial/pip-upd/","title":"如何快速更新所有Python库"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://phishinqi.github.io/Blog/note/grow-up/grow-up-2/","path":"/note/grow-up/grow-up-2/","title":"向上生长 二"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>如何快速更新所有Python库 | PhishinQi's Blog</title>
+<title>向上生长 二 | PhishinQi's Blog</title>
   
 
 
@@ -107,7 +107,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -120,7 +120,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%8F%AF%E5%8D%87%E7%BA%A7%E7%9A%84Python%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">查看所有可升级的Python库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E6%89%80%E6%9C%89%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">升级所有库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">借助第三方库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%9F%E5%8A%A9Python%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.</span> <span class="nav-text">借助Python脚本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WARNING"><span class="nav-number">3.</span> <span class="nav-text">WARNING</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8Bpip%E7%89%88%E6%9C%AC"><span class="nav-number">3.1.</span> <span class="nav-text">查看pip版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7pip"><span class="nav-number">3.2.</span> <span class="nav-text">升级pip</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phishinqi.github.io/Blog/tutorial/pip-upd/">
+    <link itemprop="mainEntityOfPage" href="https://phishinqi.github.io/Blog/note/grow-up/grow-up-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
@@ -220,12 +219,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="如何快速更新所有Python库 | PhishinQi's Blog">
+      <meta itemprop="name" content="向上生长 二 | PhishinQi's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          如何快速更新所有Python库
+          向上生长 二
         </h1>
 
         <div class="post-meta-container">
@@ -237,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-05-03 09:28:32 / 修改时间：09:29:47" itemprop="dateCreated datePublished" datetime="2022-05-03T09:28:32+08:00">2022-05-03</time>
+      <time title="创建时间：2022-05-03 20:50:59 / 修改时间：21:31:33" itemprop="dateCreated datePublished" datetime="2022-05-03T20:50:59+08:00">2022-05-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -245,7 +244,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/Blog/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+          <a href="/Blog/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">阅读笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Blog/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/%E5%90%91%E4%B8%8A%E7%94%9F%E9%95%BF/" itemprop="url" rel="index"><span itemprop="name">向上生长</span></a>
         </span>
     </span>
 
@@ -256,14 +259,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>578</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -274,25 +277,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文将讨论如何快速更新Python库</p>
-<h1 id="查看所有可升级的Python库"><a href="#查看所有可升级的Python库" class="headerlink" title="查看所有可升级的Python库"></a>查看所有可升级的Python库</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 list --outdated</span><br></pre></td></tr></table></figure>
-
-<h1 id="升级所有库"><a href="#升级所有库" class="headerlink" title="升级所有库"></a>升级所有库</h1><h2 id="借助第三方库"><a href="#借助第三方库" class="headerlink" title="借助第三方库"></a>借助第三方库</h2><p>我们可通过使用<code>pip-review</code>进行更新。</p>
-<p>安装语句：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pip-review</span><br></pre></td></tr></table></figure>
-
-<p>安装完之后，我们可以通过如下语句进行更新：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip-review --<span class="built_in">local</span> --interactive</span><br></pre></td></tr></table></figure>
-
-<p>输入<code>A</code>，全部升级即可</p>
-<h2 id="借助Python脚本"><a href="#借助Python脚本" class="headerlink" title="借助Python脚本"></a>借助Python脚本</h2><p>创建一个Python文件，输入以下内容：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pkg_resources</span><br><span class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> call</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> packages <span class="keyword">in</span> [dist.project_name <span class="keyword">for</span> dist <span class="keyword">in</span> pkg_resources.working_set]:</span><br><span class="line">    call(<span class="string">&quot;pip3 install --upgrade &quot;</span> + <span class="string">&#x27;&#x27;</span>.join(packages) + <span class="string">&#x27; --user&#x27;</span>, shell=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<p>运行即可。</p>
-<h1 id="WARNING"><a href="#WARNING" class="headerlink" title="WARNING"></a>WARNING</h1><p>如遇到以下报错<code>WARNING: You are using pip version **.*.*; however, version **.*.* is available.</code>，我们便需要对pip进行更新</p>
-<h2 id="查看pip版本"><a href="#查看pip版本" class="headerlink" title="查看pip版本"></a>查看pip版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 --version</span><br></pre></td></tr></table></figure>
-
-<h2 id="升级pip"><a href="#升级pip" class="headerlink" title="升级pip"></a>升级pip</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python3 -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+        <p>        这是阅读《向上生长》后的第二篇阅读笔记。究竟为什么要写这些看似没用的东西？也许是在借鉴作者“九边”的做法吧。他选择将收获的新知识写下来发一条微博，我则选择将阅读这本书每一章后所带给我的感觉记录在自己的 Blog 中。</p>
+<p>        我并非与九边相同的前端工程师，对于前端的相关语言也只是略懂一二而已，不过这并不影响我写这篇阅读笔记的进程。“对之前读过的书有个记录，在吸收新知识的同时锻炼自己”。我从来没有想过还可以这样。对此，我真的要感谢九边教会我的这些。</p>
+<p>        正如同九边所说，读书有用，他将读书比喻成了搜索引擎。这样的比喻很直观，很形象。搜索引擎只是工具，它是用来帮助人们学习而非取代人们学习。人就像是木匠，搜索引擎就是工具，而知识则相当于木材。只有工具而没有木材什么也做不成，只有木材没用工具也是什么也无法做到；只有工具和木材而没有木匠更是不必多说。</p>
+<p>        又想起了曾经不知道在哪里听到的话，只要你想做，就不会缺少做这件事的时间。你有没有时间去读书纯粹是由你是否想去读书而决定的。因为你想去读，所以才会将时间用在这上面；如果你不想去读，那你怎么也不想将时间浪费在这上面。我与九边的观点是不同的，我认为没有人是懒惰的，每个人都是十分勤快的，他只是不想将时间浪费在这上面而已。而所谓浪费，则是你将时间用在了不想做的事情上。</p>
+<p>        每个人都是不了解自己的，嘴上说着你不了解我之类的话，其实连自己也不了解自己。由这个思路来讲，其实每个人都不应该说“你并不了解我”之类的话。</p>
+<p>        我与九边不一样，九边懂得要比我多得多。他会用神经学来解释习惯，而我只能用条件反射来解释。人在不适应某种习惯时会十分的难受，我认为这也是条件反射所导致的。他会用雪球理论来解释日积月累，而我只会用最简单的降雨来解释。</p>
+<p>        在前面说过要注重数量，但其实单单注重数量是不行的。就拿读书来举例，你在一年中读完十本书，而我在一年中仅读完半本书，这有区别吗？有区别，且不单单时数量的区别。一年中读完10本书这确实符合上文所说的注重数量，但只在乎读书的数量就不去理解、消化书中所蕴含的知识和道理了吗？我认为这是不行的。他在一年中读完十本书但是并没有消化书中的知识，我在一年中只读完半本书但我将书中的知识消化完全了。读书的意义不在于读，而是在于理解。只有将书中的知识完全消化之后才可以被称之为读书。</p>
+<p>        完全消化这在实际中并不可能，而我们所需要做的则是将书中的知识消化到 70% 及以上便可以了。</p>
+<p>        在这里我似乎要反驳一下之前的观点了。以写小说为例子，有些人会因为打字速度太慢而放弃，如果按照九边作者所说，多写几年，打字速度一定会提升上去。其实这并非是结果，另一个结果可能是打字速度并没有提升多少。再结合上述读书的例子，这时我便对九边所说的话产生了怀疑。量的提升有可能并不会带来质的飞跃，由量变到质变的前提是从量变中学到些什么。打字速度由慢到快是自己在打字这方面上摸到了门道，在打字这一过程中学到了什么更为快速、简单的方法来提升自己的打字速度。</p>
+<p>        换句话来总结上述则为在注重的同时还要在量变的过程中学到些什么技巧，否则你在这一过程中所做的纯属是浪费时间。</p>
 
     </div>
 
@@ -319,21 +313,21 @@
 </div>
 
           <div class="post-tags">
-              <a href="/Blog/tags/Python/" rel="tag"># Python</a>
-              <a href="/Blog/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/Blog/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" rel="tag"># 阅读笔记</a>
+              <a href="/Blog/tags/%E4%B9%9D%E8%BE%B9/" rel="tag"># 九边</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/Blog/readme/blog-move/" rel="prev" title="博客迁移后的第一篇文章（确信）">
-                  <i class="fa fa-chevron-left"></i> 博客迁移后的第一篇文章（确信）
+                <a href="/Blog/tutorial/minecraft-java/" rel="prev" title="关于Java Minecraft Forge服务器搭建">
+                  <i class="fa fa-chevron-left"></i> 关于Java Minecraft Forge服务器搭建
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/Blog/tutorial/minecraft-java/" rel="next" title="关于Java Minecraft Forge服务器搭建">
-                  关于Java Minecraft Forge服务器搭建 <i class="fa fa-chevron-right"></i>
+                <a href="/Blog/posts/how-to-choose/" rel="next" title="关于如何正确理解 Eclipse 与 IDEA">
+                  关于如何正确理解 Eclipse 与 IDEA <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
