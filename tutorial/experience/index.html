@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Blog/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="B7FCC21F6A14D658378BB04F2D5CC79D">
+
+<link rel="stylesheet" href="/Blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"phishinqi.github.io","root":"/Blog/","images":"/Blog/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/Blog/js/config.js"></script>
+
+    <meta name="description" content="0x0.前言        已经忘了当初为什么要搭建博客，可能只是为了和周围的同学装一下吧，不过在现在看来，博客正在改变着我的生活，正如前面某篇文章所言——“若你不想在身消体灭之际就被世界所遗忘，那就写一些值得一写的东西，或去做一些值得一写的事情”。虽然不指望着被记录下来，但选择了这条路就坚持走下去，这样做是不会有坏处的，它是会让我懂的东西越来越多。 0x1.准备        在搭建博客前需要做">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于我搭建博客的经验">
+<meta property="og:url" content="https://phishinqi.github.io/Blog/tutorial/experience/index.html">
+<meta property="og:site_name" content="PhishinQi&#39;s Blog">
+<meta property="og:description" content="0x0.前言        已经忘了当初为什么要搭建博客，可能只是为了和周围的同学装一下吧，不过在现在看来，博客正在改变着我的生活，正如前面某篇文章所言——“若你不想在身消体灭之际就被世界所遗忘，那就写一些值得一写的东西，或去做一些值得一写的事情”。虽然不指望着被记录下来，但选择了这条路就坚持走下去，这样做是不会有坏处的，它是会让我懂的东西越来越多。 0x1.准备        在搭建博客前需要做">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-04T14:09:55.000Z">
+<meta property="article:modified_time" content="2022-05-03T16:03:49.889Z">
+<meta property="article:author" content="Ryokou_Kiryu">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://phishinqi.github.io/Blog/tutorial/experience/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://phishinqi.github.io/Blog/tutorial/experience/","path":"/tutorial/experience/","title":"关于我搭建博客的经验"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>关于我搭建博客的经验 | PhishinQi's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Blog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PhishinQi's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/Blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/Blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/Blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/Blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-timeline"><a href="/Blog/timeline/" rel="section"><i class="fa fa-history fa-fw"></i>足迹</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x0-%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0x0.前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x1-%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">0x1.准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x2-%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">3.</span> <span class="nav-text">0x2.安装 Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x3-%E5%AE%89%E8%A3%85-NexT"><span class="nav-number">4.</span> <span class="nav-text">0x3.安装 NexT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x4-%E8%BF%9B%E8%A1%8C%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">0x4.进行个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4x1-Hexo-%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.1.</span> <span class="nav-text">4x1.Hexo 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.1.0.1.</span> <span class="nav-text">一些常用设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4x2-NexT-%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.2.</span> <span class="nav-text">4x2.NexT 设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x5-%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">6.</span> <span class="nav-text">0x5.创建一篇文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x6-%E9%83%A8%E7%BD%B2%E8%87%B3-Github"><span class="nav-number">7.</span> <span class="nav-text">0x6.部署至 Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x7-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86"><span class="nav-number">8.</span> <span class="nav-text">0x7.报错处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054"><span class="nav-number">8.1.</span> <span class="nav-text">OpenSSL SSL_read:Connection was reset,errno 10054</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%951"><span class="nav-number">8.1.1.</span> <span class="nav-text">解决方法1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952"><span class="nav-number">8.1.2.</span> <span class="nav-text">解决方法2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%953"><span class="nav-number">8.1.3.</span> <span class="nav-text">解决方法3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Failed-to-connect-to-github-com-port-443-after-21056-ms-Timed-out"><span class="nav-number">8.2.</span> <span class="nav-text">Failed to connect to github.com port 443 after 21056 ms: Timed out</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%951-1"><span class="nav-number">8.2.1.</span> <span class="nav-text">解决方法1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952-1"><span class="nav-number">8.3.</span> <span class="nav-text">解决方法2</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ryokou_Kiryu"
+      src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">Ryokou_Kiryu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Blog/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Blog/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/phishinqi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;phishinqi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:phishinqi@outlook.com" title="E-Mail → mailto:phishinqi@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.limewtea.com/" title="https:&#x2F;&#x2F;www.limewtea.com&#x2F;" rel="noopener" target="_blank">和泉聆风</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://support.qq.com/products/405073/" title="https:&#x2F;&#x2F;support.qq.com&#x2F;products&#x2F;405073&#x2F;" rel="noopener" target="_blank">其他</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://phishinqi.github.io/Blog/tutorial/experience/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+      <meta itemprop="name" content="Ryokou_Kiryu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="关于我搭建博客的经验 | PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于我搭建博客的经验
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-04 22:09:55 / 修改时间：00:03:49" itemprop="dateCreated datePublished" datetime="2022-05-04T22:09:55+08:00">2022-05-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Blog/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="0x0-前言"><a href="#0x0-前言" class="headerlink" title="0x0.前言"></a>0x0.前言</h1><p>        已经忘了当初为什么要搭建博客，可能只是为了和周围的同学装一下吧，不过在现在看来，博客正在改变着我的生活，正如前面某篇文章所言——“若你不想在身消体灭之际就被世界所遗忘，那就写一些值得一写的东西，或去做一些值得一写的事情”。虽然不指望着被记录下来，但选择了这条路就坚持走下去，这样做是不会有坏处的，它是会让我懂的东西越来越多。</p>
+<h1 id="0x1-准备"><a href="#0x1-准备" class="headerlink" title="0x1.准备"></a>0x1.准备</h1><p>        在搭建博客前需要做好充足的准备，下方则是我搭建该博客所用到的一些东西：</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js（npm）</a>，用于安装 Hexo</p>
+</li>
+<li><p><a href="%5BHexo%5D(https://hexo.io/zh-cn/)">Hexo</a> 静态博客框架</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a> 博客所用主题，可选用其他主题</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/">Github</a> 用于托管，也可使用 <a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a> ，<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a> 的操作与 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 类似</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a> Bash客户端</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg">Clash For Windows</a> 用于代理，以防止 Github 无法访问.可选用 <a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan">Trojan</a>、<a target="_blank" rel="noopener" href="https://www.v2ray.com/">V2ray</a>、<a target="_blank" rel="noopener" href="https://github.com/shadowsocksrr/shadowsocksr-csharp">SSR</a> 等</p>
+</li>
+</ol>
+<p>        </p>
+<h1 id="0x2-安装-Hexo"><a href="#0x2-安装-Hexo" class="headerlink" title="0x2.安装 Hexo"></a>0x2.安装 Hexo</h1><p>        在电脑中打开 CMD 或 Git 并 cd 到一个除 <strong>C</strong> 盘以外的驱动器中（如 <strong>D</strong> 盘）</p>
+<p>        依次输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">        npm install hexo-cli -g</span><br><span class="line">        hexo init &#123;Blog Name&#125;</span><br><span class="line">        <span class="built_in">cd</span> &#123;Blog Name&#125;</span><br><span class="line">        npm install</span><br></pre></td></tr></table></figure>
+
+<p>        安装完成后可输入 <code>hexo install</code> 查看、测试</p>
+<h1 id="0x3-安装-NexT"><a href="#0x3-安装-NexT" class="headerlink" title="0x3.安装 NexT"></a>0x3.安装 NexT</h1><p>        要说 Hexo 除了免费一无是处，这点我是十分不同意的。Hexo 有多种主题可供各位博主选择，在下在这里选择 <strong>NexT</strong> 主题。<strong>NexT</strong> 主题的一大亮点就是简约，一般来讲，NexT主题只会存在三种颜色：黑色、灰色和白色。主要由黑色和白色构成的页面显得十分干净。</p>
+<p>        接下来我将演示如何安装 NexT 主题</p>
+<p>        首先进入站点的根目录，输入如下指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-next        </span><br></pre></td></tr></table></figure>
+
+<p>        安装完成后，打开根目录下的_config.yml，按下 Ctrl + F 搜索 <code>theme</code> 关键词并将值改为 <strong><code>next</code></strong></p>
+<p>        输入 <code>hexo clean</code> 清理缓存，再输入 <code>hexo server</code> 检查主题是否安装完毕</p>
+<div class="note info"><p>    <em><strong>注：在博客更新后，随手清除 hexo 的缓存是一个好的习惯</strong></em></p>
+</div>
+
+<p>           至此，博客的部署工作便已经完成了</p>
+<h1 id="0x4-进行个性化设置"><a href="#0x4-进行个性化设置" class="headerlink" title="0x4.进行个性化设置"></a>0x4.进行个性化设置</h1><p>        其实这并没有写的必要，看着官方的文档慢慢来就可以了。</p>
+<h2 id="4x1-Hexo-设置"><a href="#4x1-Hexo-设置" class="headerlink" title="4x1.Hexo 设置"></a>4x1.Hexo 设置</h2><p>        Hexo 配置文件为博客根目录下的 _config.yml</p>
+<div class="note default"><h4 id="一些常用设置"><a href="#一些常用设置" class="headerlink" title="一些常用设置"></a>一些常用设置</h4><table>
+<thead>
+<tr>
+<th align="center">原名</th>
+<th align="center">译名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center">标题</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">副标题</td>
+</tr>
+<tr>
+<td align="center">anthor</td>
+<td align="center">作者</td>
+</tr>
+<tr>
+<td align="center">language</td>
+<td align="center">语言</td>
+</tr>
+<tr>
+<td align="center">url</td>
+<td align="center">网址，因为使用 Github Pages 所以将其设置为 https:&#x2F;&#x2F;{username}.github.io</td>
+</tr>
+<tr>
+<td align="center">deploy</td>
+<td align="center">因为要推送到 Github，所以将 type 的值改为 ‘git’，将 repo 的值改为仓库链接</td>
+</tr>
+</tbody></table>
+</div>
+
+<h2 id="4x2-NexT-设置"><a href="#4x2-NexT-设置" class="headerlink" title="4x2.NexT 设置"></a>4x2.NexT 设置</h2><p>        在编辑主题配置文件之前，请将主题配置文件复制到根目录并更名为 <code>_config.[name].yml</code></p>
+<p>        对于 NexT 的配置文件可从<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/">官网</a>查看。</p>
+<h1 id="0x5-创建一篇文章"><a href="#0x5-创建一篇文章" class="headerlink" title="0x5.创建一篇文章"></a>0x5.创建一篇文章</h1><p>        现在你已经创建了属于你自己的博客页，现在应该将自己的文章发布到博客上面了。</p>
+<p>        在 Bash 中键入以下命令以创建新文章</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#123;name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>        创建完成后可进入 <code>source/_posts</code> 中查看或编辑</p>
+<h1 id="0x6-部署至-Github"><a href="#0x6-部署至-Github" class="headerlink" title="0x6.部署至 Github"></a>0x6.部署至 Github</h1><p>        现在文章也已经写好了，最后一步便是将博客推送到 Github 了。</p>
+<p>        在命令行中键入如下指令以进行推送。<strong>注：前提是已经编辑过 Hexo 的配置文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h1 id="0x7-报错处理"><a href="#0x7-报错处理" class="headerlink" title="0x7.报错处理"></a>0x7.报错处理</h1><p>        在部署的过程中难免会遇到一些问题，现在我将我遇到的问题的解决方法写下来共大家学习。</p>
+<h2 id="OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="OpenSSL SSL_read:Connection was reset,errno 10054"></a>OpenSSL SSL_read:Connection was reset,errno 10054</h2><h3 id="解决方法1"><a href="#解决方法1" class="headerlink" title="解决方法1"></a>解决方法1</h3><p>        输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2"></a>解决方法2</h3><p>        在命令行中键入如下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config http.postBuffer 5242880003</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决方法3"><a href="#解决方法3" class="headerlink" title="解决方法3"></a>解决方法3</h3><p>        改 hosts 文件，此处不做演示</p>
+<h2 id="Failed-to-connect-to-github-com-port-443-after-21056-ms-Timed-out"><a href="#Failed-to-connect-to-github-com-port-443-after-21056-ms-Timed-out" class="headerlink" title="Failed to connect to github.com port 443 after 21056 ms: Timed out"></a>Failed to connect to github.com port 443 after 21056 ms: Timed out</h2><h3 id="解决方法1-1"><a href="#解决方法1-1" class="headerlink" title="解决方法1"></a>解决方法1</h3><p>        设置代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="解决方法2-1"><a href="#解决方法2-1" class="headerlink" title="解决方法2"></a>解决方法2</h2><p>        取消代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy </span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://support.qq.com/products/405073/">
+          <span class="icon">
+            <i class="fa fa-link"></i>
+          </span>
+
+          <span class="label">Other</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/Blog/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/Blog/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Blog/posts/how-to-choose/" rel="prev" title="关于如何正确理解 Eclipse 与 IDEA">
+                  <i class="fa fa-chevron-left"></i> 关于如何正确理解 Eclipse 与 IDEA
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ryokou_Kiryu</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">15 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/Blog/js/comments.js"></script><script src="/Blog/js/utils.js"></script><script src="/Blog/js/motion.js"></script><script src="/Blog/js/next-boot.js"></script><script src="/Blog/js/pjax.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
