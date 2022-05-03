@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Blog/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="B7FCC21F6A14D658378BB04F2D5CC79D">
+
+<link rel="stylesheet" href="/Blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"phishinqi.github.io","root":"/Blog/","images":"/Blog/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/Blog/js/config.js"></script>
+
+    <meta name="description" content="注：本文将会讲解有关Minecraft Java服务器搭建的一些问题，其中包括Forge和Fabric服务器搭建，我将默认你所使用的为Windows操作系统，另外，本文不含插件服搭建。 服务端的选择与使用Minecraft的服务端种类很多，那么我们应该如何去选择并使用它们呢？ 原版Minecraft原版服务端。原版服务端又被称为官服，它的特性与原版相一致，是完全没有经过任何修改的，十分适合基友服联">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Java Minecraft Forge服务器搭建">
+<meta property="og:url" content="https://phishinqi.github.io/Blog/tutorial/minecraft-java/index.html">
+<meta property="og:site_name" content="PhishinQi&#39;s Blog">
+<meta property="og:description" content="注：本文将会讲解有关Minecraft Java服务器搭建的一些问题，其中包括Forge和Fabric服务器搭建，我将默认你所使用的为Windows操作系统，另外，本文不含插件服搭建。 服务端的选择与使用Minecraft的服务端种类很多，那么我们应该如何去选择并使用它们呢？ 原版Minecraft原版服务端。原版服务端又被称为官服，它的特性与原版相一致，是完全没有经过任何修改的，十分适合基友服联">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Minecraft.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/JS06R68NC%7B(%5DH((D%60%60OBYSO.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Forge.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Fabric.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Server.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Forge1.png">
+<meta property="article:published_time" content="2022-05-03T01:33:21.000Z">
+<meta property="article:modified_time" content="2022-05-03T01:53:08.120Z">
+<meta property="article:author" content="Ryokou_Kiryu">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Minectaft">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Minecraft.png">
+
+
+<link rel="canonical" href="https://phishinqi.github.io/Blog/tutorial/minecraft-java/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://phishinqi.github.io/Blog/tutorial/minecraft-java/","path":"/tutorial/minecraft-java/","title":"关于Java Minecraft Forge服务器搭建"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>关于Java Minecraft Forge服务器搭建 | PhishinQi's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Blog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PhishinQi's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/Blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/Blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/Blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/Blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-timeline"><a href="/Blog/timeline/" rel="section"><i class="fa fa-history fa-fw"></i>足迹</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E9%80%89%E6%8B%A9%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">服务端的选择与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%89%88"><span class="nav-number">1.1.</span> <span class="nav-text">原版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.1.1.</span> <span class="nav-text">下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mod"><span class="nav-number">1.2.</span> <span class="nav-text">Mod</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Forge"><span class="nav-number">1.2.1.</span> <span class="nav-text">Forge</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-1"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">小知识</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fabric"><span class="nav-number">1.2.2.</span> <span class="nav-text">Fabric</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-2"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">下载</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AA%E9%80%80"><span class="nav-number">2.</span> <span class="nav-text">闪退</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="nav-number">2.1.</span> <span class="nav-text">问题排查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%94%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">通用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Forge%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.1.2.</span> <span class="nav-text">Forge服务端</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%BE%83%E4%BD%8E%E7%89%88%E6%9C%ACForge%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8B%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">关于较低版本Forge服务端下载</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ryokou_Kiryu"
+      src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">Ryokou_Kiryu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Blog/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Blog/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/phishinqi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;phishinqi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:phishinqi@outlook.com" title="E-Mail → mailto:phishinqi@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.limewtea.com/" title="https:&#x2F;&#x2F;www.limewtea.com&#x2F;" rel="noopener" target="_blank">和泉聆风</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://support.qq.com/products/405073/" title="https:&#x2F;&#x2F;support.qq.com&#x2F;products&#x2F;405073&#x2F;" rel="noopener" target="_blank">其他</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://phishinqi.github.io/Blog/tutorial/minecraft-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+      <meta itemprop="name" content="Ryokou_Kiryu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="关于Java Minecraft Forge服务器搭建 | PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于Java Minecraft Forge服务器搭建
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-05-03 09:33:21 / 修改时间：09:53:08" itemprop="dateCreated datePublished" datetime="2022-05-03T09:33:21+08:00">2022-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Blog/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>注：本文将会讲解有关Minecraft Java服务器搭建的一些问题，其中包括Forge和Fabric服务器搭建，我将默认你所使用的为Windows操作系统，另外，本文不含插件服搭建。</strong></p>
+<h1 id="服务端的选择与使用"><a href="#服务端的选择与使用" class="headerlink" title="服务端的选择与使用"></a>服务端的选择与使用</h1><p>Minecraft的服务端种类很多，那么我们应该如何去选择并使用它们呢？</p>
+<h2 id="原版"><a href="#原版" class="headerlink" title="原版"></a>原版</h2><p>Minecraft原版服务端。原版服务端又被称为官服，它的特性与原版相一致，是完全没有经过任何修改的，十分适合基友服联机使用，此外，它在很多地方都有方法下载，这其中包括MCWiki。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下面将演示Minecraft 1.17.1原版服务端的下载方法。</p>
+<p>首先我们在MCWiki打开MC Java 1.17.1的词条，此时我们将目光转向右边。</p>
+<img title="" src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Minecraft.png" alt="">
+
+<p>我们会发现下载处包含服务端，我们点击它即可下载。</p>
+<p>你也可以在<a target="_blank" rel="noopener" href="https://www.minecraft.net/zh-hans/download/server">官网下载</a>。注：官网默认为最新游戏版本。</p>
+<h2 id="Mod"><a href="#Mod" class="headerlink" title="Mod"></a>Mod</h2><h3 id="Forge"><a href="#Forge" class="headerlink" title="Forge"></a>Forge</h3><p>Forge服务端，顾名思义，Forge服务端即为Forge所推出的服务端，可以使用Forge Mod。</p>
+<h4 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h4><p>下面我将演示Minecraft 1.16.5 Forge服务端的下载方法。</p>
+<p>首先我们打开<a target="_blank" rel="noopener" href="https://files.minecraftforge.net/net/minecraftforge/forge/">Forge的官网</a>，找到目前最新版本<br><img title="" src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/JS06R68NC%7B(%5DH((D%60%60OBYSO.png" alt=""></p>
+<p>点击Installer即可下载。</p>
+<p><strong>注意：我们现在下载的并非服务端，而是Forge的安装文件，部分版本的安装方法可能有些不同，我将会在最后进行讲解</strong></p>
+<p>双击运行我们下载的安装文件。</p>
+<p>选择Install server</p>
+<p><img src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Forge.png"></p>
+<p>然后选择一个空文件夹，等待安装即可。</p>
+<p>Forge服务端安装时间可能较长，其中可能需要手动补全libraries库，我们可以通过查看log来找到所需文件手动下载。建议使用特殊上网方法进行安装，此处不在过多赘述。</p>
+<h4 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h4><p>如果不想观看广告的话，可以使用如下方法：</p>
+<p>首先，我们右键Installer，选择复制链接得到的结果如下：</p>
+<p><code>https://adfoc.us/serve/sitelinks/?id=271228&amp;url=https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.5-36.1.33/forge-1.16.5-36.1.33-installer.jar</code></p>
+<p>我们将前面的https:&#x2F;&#x2F;***删除，保留后面的内容：</p>
+<p><code>https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.5-36.1.33/forge-1.16.5-36.1.33-installer.jar</code></p>
+<p>此时，我们就可以将它复制到多线程下载器中进行下载，当然，你可以直接复制到浏览器中下载。</p>
+<h3 id="Fabric"><a href="#Fabric" class="headerlink" title="Fabric"></a>Fabric</h3><p>Fabric服务端，顾名思义，Fabric服务端即为Fabric所推出的服务端，可以使用Fabric Mod。</p>
+<h4 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h4><p>下载Fabric服务端，同样需要进入<a target="_blank" rel="noopener" href="https://fabricmc.net/use/">Fabric的官网</a>，我同样以目前最新版为例。</p>
+<img title="" src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Fabric.png" alt="">
+
+<p>我们点击Download installer，无论是.jar后缀还是.exe后缀都不会影响我们接下来的操作。</p>
+<img title="" src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Server.png" alt="">
+
+<p>点击Server，同样选择一个空目录等待安装即可。</p>
+<p>如果需要更换Minecraft版本，请点击下拉框选择。</p>
+<h1 id="闪退"><a href="#闪退" class="headerlink" title="闪退"></a>闪退</h1><h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><ol>
+<li>确认是否安装JDK</li>
+<li>确认是否正确配置环境变量</li>
+<li>确认服务端是否损坏</li>
+<li>确认是否将eula协议设置为true</li>
+<li>如是游戏版本为1.17+，请确认是否正确安装JDK 16</li>
+<li>确认文件名与启动脚本中文件名一致</li>
+<li>确认使用ansi编码保存</li>
+<li>确认各参数之间添加空格</li>
+</ol>
+<h3 id="Forge服务端"><a href="#Forge服务端" class="headerlink" title="Forge服务端"></a>Forge服务端</h3><ol>
+<li>确认是否补全libraries库</li>
+<li>确认libraries库是否损坏</li>
+</ol>
+<p>另外，端口被占用也会导致Minecraft服务器无法运行。</p>
+<h1 id="关于较低版本Forge服务端下载"><a href="#关于较低版本Forge服务端下载" class="headerlink" title="关于较低版本Forge服务端下载"></a>关于较低版本Forge服务端下载</h1><p>较低版本的Forge服务端下载使用方式相对与目前较高版本有所不同，在此处我们以Forge 1.12.2最新版举例。</p>
+<p>我们进入<a target="_blank" rel="noopener" href="https://files.minecraftforge.net/net/minecraftforge/forge/">Forge官网</a></p>
+<p>依次选择1.12—&gt;1.12.2</p>
+<img title="" src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Forge1.png" alt="">
+
+<p>我们下载目前最新Forge中的Universal文件。同样，上方所说的小知识对该处依旧适用。</p>
+<p>我们将下载好的文件放到一个空文件夹，使用.bat脚本运行即可。</p>
+<p>同上，Forge服务端安装时间可能较长，其中可能需要手动补全libraries库，我们可以通过查看log来找到所需文件手动下载。建议使用特殊上网方法进行安装。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://support.qq.com/products/405073/">
+          <span class="icon">
+            <i class="fa fa-link"></i>
+          </span>
+
+          <span class="label">Other</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/Blog/tags/Java/" rel="tag"># Java</a>
+              <a href="/Blog/tags/Minectaft/" rel="tag"># Minectaft</a>
+              <a href="/Blog/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"># 服务器</a>
+              <a href="/Blog/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Blog/tutorial/pip-upd/" rel="prev" title="如何快速更新所有Python库">
+                  <i class="fa fa-chevron-left"></i> 如何快速更新所有Python库
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Blog/posts/how-to-choose/" rel="next" title="关于如何正确理解 Eclipse 与 IDEA">
+                  关于如何正确理解 Eclipse 与 IDEA <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ryokou_Kiryu</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">6k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/Blog/js/comments.js"></script><script src="/Blog/js/utils.js"></script><script src="/Blog/js/motion.js"></script><script src="/Blog/js/next-boot.js"></script><script src="/Blog/js/pjax.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

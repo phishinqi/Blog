@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Blog/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="B7FCC21F6A14D658378BB04F2D5CC79D">
+
+<link rel="stylesheet" href="/Blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"phishinqi.github.io","root":"/Blog/","images":"/Blog/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/Blog/js/config.js"></script>
+
+    <meta name="description" content="0x0.前言        相信很多程序员都知道两款较为普及的 Java 集成开发环境（IDE）吧—— Eclipse 与 IntelliJ IDEA。         先说说 Eclipse 吧，首先，它最初发布于 2001 年 11 月 7 日。Eclipse 由 Java 编写，同样，它的主要用途也是开发 Java 程序。当然，你还可以使用 Eclipse 来进行 C、C#、Cpp、Pyth">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于如何正确理解 Eclipse 与 IDEA">
+<meta property="og:url" content="https://phishinqi.github.io/Blog/posts/how-to-choose/index.html">
+<meta property="og:site_name" content="PhishinQi&#39;s Blog">
+<meta property="og:description" content="0x0.前言        相信很多程序员都知道两款较为普及的 Java 集成开发环境（IDE）吧—— Eclipse 与 IntelliJ IDEA。         先说说 Eclipse 吧，首先，它最初发布于 2001 年 11 月 7 日。Eclipse 由 Java 编写，同样，它的主要用途也是开发 Java 程序。当然，你还可以使用 Eclipse 来进行 C、C#、Cpp、Pyth">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-04T11:34:41.000Z">
+<meta property="article:modified_time" content="2022-05-03T12:36:30.761Z">
+<meta property="article:author" content="Ryokou_Kiryu">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="讨论">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://phishinqi.github.io/Blog/posts/how-to-choose/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://phishinqi.github.io/Blog/posts/how-to-choose/","path":"/posts/how-to-choose/","title":"关于如何正确理解 Eclipse 与 IDEA"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>关于如何正确理解 Eclipse 与 IDEA | PhishinQi's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Blog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">PhishinQi's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使然</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/Blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/Blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/Blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/Blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-timeline"><a href="/Blog/timeline/" rel="section"><i class="fa fa-history fa-fw"></i>足迹</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x0-%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0x0.前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x1-%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">0x1.区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1x1-%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">1x1.内存占用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1x2-%E4%B8%BB%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">1x2.主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1x3-%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8"><span class="nav-number">2.3.</span> <span class="nav-text">1x3.自动补全</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x2-%E5%90%84%E8%87%AA%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">0x2.各自的优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2x1-IDEA"><span class="nav-number">3.0.1.</span> <span class="nav-text">2x1.IDEA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2x2-Eclipse"><span class="nav-number">3.0.2.</span> <span class="nav-text">2x2.Eclipse</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x3-%E6%88%91%E5%BA%94%E8%AF%A5%E9%80%89%E6%8B%A9%E4%BB%80%E4%B9%88-IDE-%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">0x3.我应该选择什么 IDE ？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x4-%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">0x4.总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ryokou_Kiryu"
+      src="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">Ryokou_Kiryu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Blog/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Blog/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/phishinqi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;phishinqi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:phishinqi@outlook.com" title="E-Mail → mailto:phishinqi@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.limewtea.com/" title="https:&#x2F;&#x2F;www.limewtea.com&#x2F;" rel="noopener" target="_blank">和泉聆风</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://support.qq.com/products/405073/" title="https:&#x2F;&#x2F;support.qq.com&#x2F;products&#x2F;405073&#x2F;" rel="noopener" target="_blank">其他</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://phishinqi.github.io/Blog/posts/how-to-choose/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/phishinqi/phishinqi.github.io@main/img/Avatar.jpg">
+      <meta itemprop="name" content="Ryokou_Kiryu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="关于如何正确理解 Eclipse 与 IDEA | PhishinQi's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于如何正确理解 Eclipse 与 IDEA
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-04 19:34:41" itemprop="dateCreated datePublished" datetime="2022-05-04T19:34:41+08:00">2022-05-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-03 20:36:30" itemprop="dateModified" datetime="2022-05-03T20:36:30+08:00">2022-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Blog/categories/%E6%96%87%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">文章</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="0x0-前言"><a href="#0x0-前言" class="headerlink" title="0x0.前言"></a>0x0.前言</h1><p>        相信很多程序员都知道两款较为普及的 Java 集成开发环境（IDE）吧—— Eclipse 与 IntelliJ IDEA。</p>
+<p>        先说说 Eclipse 吧，首先，它最初发布于 2001 年 11 月 7 日。Eclipse 由 Java 编写，同样，它的主要用途也是开发 Java 程序。当然，你还可以使用 Eclipse 来进行 C、C#、Cpp、Python 等语言的开发。要说 Eclipse 最亮眼的地方，莫过于它是开源且免费的，它还可以添加一些实用的拓展来辅助各位码农的开发。</p>
+<p>        再来谈谈 IntelliJ IDEA （下文简称IDEA） 吧，相对于 Eclipse 来讲 IDEA 分为两个版本—— Ultimate 与 Community。Community 虽然免费，但它的限制仍有很多。但虽说一个版本付费一个版本免费，二者却都可用于商业开发。同时，JetBrains 对于学生的优惠也算是下了血本。它最初发布于 2001 年 1 月。与 Eclipse 相同的是 IDEA 也有 Java 语言编写，也主要用于 Java 程序的开发。你还可以使用 IDEA 编写 HTML、Kotlin、R、PHP、Go 等语言。</p>
+<h1 id="0x1-区别"><a href="#0x1-区别" class="headerlink" title="0x1.区别"></a>0x1.区别</h1><h2 id="1x1-内存占用"><a href="#1x1-内存占用" class="headerlink" title="1x1.内存占用"></a>1x1.内存占用</h2><p>        从内存占用来讲，IDEA 要比 Eclipse 多得多。这可能对于有 32 GB RAM 或以上的电脑可能影响并不大，但对于仅有 8 GB RAM 的电脑来讲可能有些吃力了。不过仅仅是看 UI 界面也能发现为什么 IDEA 占用更多了吧？</p>
+<h2 id="1x2-主题"><a href="#1x2-主题" class="headerlink" title="1x2.主题"></a>1x2.主题</h2><p>        要比起 IDE 自带的 主题，那可就真的是一个天上一个地下了，IDEA 的界面十分美观，有多种主题可以挑选。而 Eclipse 在这方面似乎就有些不足了。在 Eclipse 中仅有黑色和白色主题，若想为 Eclipse 更换主题，还需要安装一个 <strong>devstyle</strong> 插件。IDEA 还内置了自己设计的、专为程序员设计的字体—— <strong>JetBrains Mono</strong>。它可以更好的区分 “1” 、“I”、“l” 以及 “0”、“O” 等等。</p>
+<h2 id="1x3-自动补全"><a href="#1x3-自动补全" class="headerlink" title="1x3.自动补全"></a>1x3.自动补全</h2><p>        在开发的过程中，我们可以使用自动补全来节省一个字母一个字母去手动输入的时间。而自动补全并非简简单单的将这条所需要的代码补全就可以了，它还需要联系上下文。在这一点中确实要夸赞一下 IDEA 了，IDEA 无需去按一些无关紧要的按键便可以为你提供一种或多种可供选择的方案。而在 Eclipse 中，你需要按下 Ctrl 与 Space 才可以查看到很多被标记高亮的代码和一些与你的开发并无关系的各种信息。</p>
+<h1 id="0x2-各自的优点"><a href="#0x2-各自的优点" class="headerlink" title="0x2.各自的优点"></a>0x2.各自的优点</h1><h3 id="2x1-IDEA"><a href="#2x1-IDEA" class="headerlink" title="2x1.IDEA"></a>2x1.IDEA</h3><p>        IDEA 为用户提供了很多默认且可供选择的功能。<br>        字太小看不清？字太多密密麻麻的很不舒服？试试通过鼠标滚轮来改变字体大小吧。</p>
+<h3 id="2x2-Eclipse"><a href="#2x2-Eclipse" class="headerlink" title="2x2.Eclipse"></a>2x2.Eclipse</h3><p>        在 Eclipse 中，你可以通过双击标签或 Ctrl + M 来最大化控制台。</p>
+<p>        在Eclipse 中，你只需要将鼠标悬停在代码上方便可以轻松查阅 Javadoc。</p>
+<h1 id="0x3-我应该选择什么-IDE-？"><a href="#0x3-我应该选择什么-IDE-？" class="headerlink" title="0x3.我应该选择什么 IDE ？"></a>0x3.我应该选择什么 IDE ？</h1><p>        从根本上来讲，两种 IDE 的功能性都基本相同，使用何种 IDE 进行开发都是自己的喜好，只有合适自己的 IDE 才是最好的、功能性最强的 IDE。如果硬要在两款IDE中选择一款，我会给予几条建议：</p>
+<ol>
+<li><p>如果电脑配置并不怎么样，推荐使用 Eclipse。</p>
+</li>
+<li><p>如果是初学者，建议使用 Eclipse。</p>
+</li>
+<li><p>如果家里有矿&#x2F;学生，可以购买 IntelliJ IDEA Ultimate。</p>
+</li>
+<li><p>如果注重美观，建议IntelliJ IDEA。</p>
+</li>
+<li><p>如果注重实用性，建议Eclipse</p>
+</li>
+</ol>
+<h1 id="0x4-总结"><a href="#0x4-总结" class="headerlink" title="0x4.总结"></a>0x4.总结</h1><p>        在当今时代，Eclipse 显得过于老古董了，对于现代人来说，任何事情都不想多花费一点无用的时间，而 IDEA 选择的将大部分功能集成在一起，确确实实的方便了人们很多。单看 IDEA 的话，JetBrains 似乎并不怎么起眼，但是请不要忘记，它还有 PyCharm 等专门为其他语言设计的编辑器或编译器。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://support.qq.com/products/405073/">
+          <span class="icon">
+            <i class="fa fa-link"></i>
+          </span>
+
+          <span class="label">Other</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/Blog/tags/Java/" rel="tag"># Java</a>
+              <a href="/Blog/tags/%E8%AE%A8%E8%AE%BA/" rel="tag"># 讨论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Blog/tutorial/minecraft-java/" rel="prev" title="关于Java Minecraft Forge服务器搭建">
+                  <i class="fa fa-chevron-left"></i> 关于Java Minecraft Forge服务器搭建
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ryokou_Kiryu</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">6k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/Blog/js/comments.js"></script><script src="/Blog/js/utils.js"></script><script src="/Blog/js/motion.js"></script><script src="/Blog/js/next-boot.js"></script><script src="/Blog/js/pjax.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
