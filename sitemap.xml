@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://phishinqi.github.io/Blog/note/grow-up/grow-up-3/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://phishinqi.github.io/Blog/tutorial/experience/</loc>
     
     <lastmod>2022-05-04</lastmod>
@@ -146,13 +155,6 @@
 
   
   <url>
-    <loc>https://phishinqi.github.io/Blog/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://phishinqi.github.io/Blog/tags/Java/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -229,14 +231,14 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://phishinqi.github.io/Blog/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://phishinqi.github.io/Blog/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+
   
   <url>
     <loc>https://phishinqi.github.io/Blog/categories/%E6%96%87%E7%AB%A0/</loc>
@@ -261,6 +263,13 @@
   
   <url>
     <loc>https://phishinqi.github.io/Blog/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://phishinqi.github.io/Blog/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2022-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
